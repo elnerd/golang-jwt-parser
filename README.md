@@ -2,7 +2,7 @@
 
 [![build](https://github.com/golang-jwt/jwt/actions/workflows/build.yml/badge.svg)](https://github.com/golang-jwt/jwt/actions/workflows/build.yml)
 [![Go
-Reference](https://pkg.go.dev/badge/github.com/golang-jwt/jwt/v5.svg)](https://pkg.go.dev/github.com/golang-jwt/jwt/v5)
+Reference](https://pkg.go.dev/badge/github.com/elnerd/golang-jwt-parser/jwt/v5.svg)](https://pkg.go.dev/github.com/elnerd/golang-jwt-parser/jwt/v5)
 [![Coverage Status](https://coveralls.io/repos/github/golang-jwt/jwt/badge.svg?branch=main)](https://coveralls.io/github/golang-jwt/jwt?branch=main)
 
 A [go](http://www.golang.org) (or 'golang' for search engine friendliness)
@@ -76,13 +76,13 @@ RSA-PSS, and ECDSA, though hooks are present for adding your own.
    below to add `jwt-go` as a dependency in your Go program.
 
 ```sh
-go get -u github.com/golang-jwt/jwt/v5
+go get -u github.com/elnerd/golang-jwt-parser/jwt/v5
 ```
 
 2. Import it in your code:
 
 ```go
-import "github.com/golang-jwt/jwt/v5"
+import "github.com/elnerd/golang-jwt-parser/jwt/v5"
 ```
 
 ## Usage
@@ -92,15 +92,15 @@ our [documentation website](https://golang-jwt.github.io/jwt/usage/create/).
 
 ## Examples
 
-See [the project documentation](https://pkg.go.dev/github.com/golang-jwt/jwt/v5)
+See [the project documentation](https://pkg.go.dev/github.com/elnerd/golang-jwt-parser/jwt/v5)
 for examples of usage:
 
 * [Simple example of parsing and validating a
-  token](https://pkg.go.dev/github.com/golang-jwt/jwt/v5#example-Parse-Hmac)
+  token](https://pkg.go.dev/github.com/elnerd/golang-jwt-parser/jwt/v5#example-Parse-Hmac)
 * [Simple example of building and signing a
-  token](https://pkg.go.dev/github.com/golang-jwt/jwt/v5#example-New-Hmac)
+  token](https://pkg.go.dev/github.com/elnerd/golang-jwt-parser/jwt/v5#example-New-Hmac)
 * [Directory of
-  Examples](https://pkg.go.dev/github.com/golang-jwt/jwt/v5#pkg-examples)
+  Examples](https://pkg.go.dev/github.com/elnerd/golang-jwt-parser/jwt/v5#pkg-examples)
 
 ## Compliance
 
@@ -153,7 +153,7 @@ mentioned cloud providers
 ## More
 
 Go package documentation can be found [on
-pkg.go.dev](https://pkg.go.dev/github.com/golang-jwt/jwt/v5). Additional
+pkg.go.dev](https://pkg.go.dev/github.com/elnerd/golang-jwt-parser/jwt/v5). Additional
 documentation can be found on [our project
 page](https://golang-jwt.github.io/jwt/).
 

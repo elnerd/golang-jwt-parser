@@ -5,7 +5,7 @@ import (
 	"crypto/rsa"
 	"os"
 
-	"github.com/golang-jwt/jwt/v5"
+	"github.com/elnerd/golang-jwt-parser/jwt/v5"
 )
 
 func LoadRSAPrivateKeyFromDisk(location string) *rsa.PrivateKey {

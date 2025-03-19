@@ -16,4 +16,4 @@ To simply display a token, use:
 
 You can install this tool with the following command:
 
-     go install github.com/golang-jwt/jwt/v5/cmd/jwt
+     go install github.com/elnerd/golang-jwt-parser/jwt/v5/cmd/jwt

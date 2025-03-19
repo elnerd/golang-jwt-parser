@@ -8,7 +8,7 @@ the hood, which should provide a better overall developer experience.
 Starting from [v5.0.0](https://github.com/golang-jwt/jwt/releases/tag/v5.0.0),
 the import path will be:
 
-    "github.com/golang-jwt/jwt/v5"
+    "github.com/elnerd/golang-jwt-parser/jwt/v5"
 
 For most users, changing the import path *should* suffice. However, since we
 intentionally changed and cleaned some of the public API, existing programs

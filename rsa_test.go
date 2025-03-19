@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/golang-jwt/jwt/v5"
+	"github.com/elnerd/golang-jwt-parser/jwt/v5"
 )
 
 var rsaTestData = []struct {
